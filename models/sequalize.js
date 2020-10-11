@@ -3,10 +3,12 @@
 
 const Sequelize = require('sequelize');
 const UserModel = require('./user_details');
+var common=require('../config/common')
+var config=common.config();
 
 
-const sequelize = new Sequelize('user', 'root', 'password', {
-  host: 'localhost',
+const sequelize = new Sequelize(config.database, config.username, config.password, {
+  host: config.host,
   dialect: 'mysql',
   pool: {
     max: 10,

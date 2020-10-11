@@ -6,7 +6,7 @@ var mail = nodemailer.createTransport({
      service: 'gmail',
      auth: {
           user: 'sagarbora.2k01@gmail.com',
-          pass: '' 
+          pass: 'Canada321' 
      }
 });
 
@@ -49,14 +49,6 @@ app.get('/', (req, res) => res.send('Welcome to NodeJS, Express Application is h
 
 //Routing the ap to corresponding URL's:--->
 require("./routes/user.routes")(app);
-
-// app.post('/dogs', function (req, res) {
-//   var dog = req.body;
-//   console.log(dog);
-
-//   res.send({ "status": "Dog added!", "data": dog });
-// });
-
 // Launch app to listen to specified port
 app.listen(port, function () {
      console.log("Running NodeJS, Express application on port " + port);
