@@ -9,7 +9,7 @@ validateToken = async (req, res, next) => {
   if (authHeader == null) return res.status(401).send({ 'message': 'Auth Token does not present in the request ', 'data': null, 'status': 401 })
  
 //decrypting token :--->
-   const response = await  jwt.verify(authHeader, '$@g@r', (err, user) => {
+   const response = await  jwt.verify(authHeader, '', (err, user) => {
    
 
     if(err==null){
