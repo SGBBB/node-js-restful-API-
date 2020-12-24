@@ -6,7 +6,7 @@ function generateAccessToken(userObject) {
     
     // expires after half and hour (1800 seconds = 30 minutes)
 
-    return jwt.sign(userObject, '$@g@r', { expiresIn: '1d' });
+    return jwt.sign(userObject, '', { expiresIn: '1d' });
   }
 
 loginUser = async (req, res) => {
